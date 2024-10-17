@@ -1,0 +1,95 @@
+task 1;
+
+class Movie {
+    private  String title ;
+ private String director ;
+ private int year ;
+ 
+ public Movie(String title,String director,int year){
+     this.title=title;
+     this.director=director;
+     this.year=year;
+ }
+public String getTitle(){
+return title;
+}
+public String getDirector(){
+    return director;
+}
+public int getYear(){
+    return year;
+}
+public void setTitle(String title){
+     this.title=title;
+}
+public void setDirector(String director){
+    this.director=director;
+}
+public void setYear(int year){
+    this.year=year;
+}public class Main {
+    public static void main(String[] args) {
+
+Movie movie = new Movie("Horror", "ali", 2024);
+
+       
+        System.out.println("Title: " + movie.getTitle());
+        System.out.println("Director: " + movie.getDirector());
+        System.out.println("Year: " + movie.getYear());
+
+    
+        System.out.println("updated");
+
+
+
+Lab task 2;
+
+public class Appliance {
+    private String brand;
+    private String model;
+    private int powerConsumption;
+
+    public Appliance(String brand, String model, int powerConsumption) {
+        this.brand = brand;
+        this.model = model;
+        this.powerConsumption = powerConsumption;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getPowerConsumption() {
+        return powerConsumption;
+    }
+}
+public class Refrigerator extends Appliance {
+    private int capacity;
+
+    public Refrigerator(String brand, String model, int powerConsumption, int capacity) {
+        super(brand, model, powerConsumption);
+        this.capacity = capacity;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Refrigerator refrigerator = new Refrigerator("dawlance", "a7570", 150, 20);
+
+        System.out.println("Brand: " + refrigerator.getBrand());
+        System.out.println("Model: " + refrigerator.getModel());
+        System.out.println("Power Consumption: " + refrigerator.getPowerConsumption());
+        System.out.println("Capacity: " + refrigerator.getCapacity());
+    }
+}
