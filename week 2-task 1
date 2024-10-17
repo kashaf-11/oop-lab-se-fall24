@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Employee {
+public:
+    string name;
+    string jobTitle;
+    double salary;
+
+    
+    Employee() {
+        name = "";
+        jobTitle = "";
+        salary = 0.0;
+    }
+
+    
+    void setEmployeeDetails(string n, string jt, double s) {
+        name = n;
+        jobTitle = jt;
+        salary = s;
+    }
+
+    
+    void updateSalary(double newSalary) {
+        salary = newSalary;
+    }
+
+    
+    void displayEmployeeInfo() {
+        cout << "Name: " << name << endl;
+      cout << "Job Title: " << jobTitle << endl;
+       cout << "Salary: $" << salary <<endl;
+    }
+};
+
+int main() {
+   
+    Employee emp;
+
+   
+    emp.setEmployeeDetails("KASHAF", "Software Engineer", 5000);
+
+   
+    emp.displayEmployeeInfo();
+
+   
+    emp.updateSalary(8000);
+
+   
+    emp.displayEmployeeInfo();
+
+    return 0;
+}
+ 
