@@ -1,0 +1,71 @@
+TASK 2 ;
+
+public class LetterA {
+    public static void main(String[] args) {
+        int rows = 7; 
+        int cols = 5; 
+       
+        for (int i = 0; i < rows; i++) {for (int j = 0; j < cols; j++) {
+                
+                if (i == 0 || i == rows  || j == 0 || j == cols - 1 || (i == rows / 2 && j > 0 && j < cols - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+task 3 ;
+
+public class LetterB {
+    public static void main(String[] args) {
+        int rows = 7; 
+        int cols = 5; 
+       
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                
+if (i == 0 || i == rows -1 || j == 0 || j == cols - 1 || (i == rows / 2 && j > 0 && j < cols - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+TASK 1;
+import java.util.Scanner;
+
+class Laptop {
+    private  String brand;
+
+    public Laptop(String brand) {
+        this.brand = brand;
+    }
+
+    public void displayBrand() {
+        System.out.println("Laptop brand: " + brand);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter laptop brand: ");
+        String laptopBrand = scanner.nextLine();
+
+        Laptop laptop = new Laptop(laptopBrand);
+        laptop.displayBrand();
+    }
+}
+
