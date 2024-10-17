@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Laptop {
+private:
+    string brand;
+    string model;
+    string serial;
+    string color;
+    double price;
+    double processorSpeed;  
+    int RAM;                
+    double screenSize;      
+
+public:
+    
+    Laptop(string b, string m, string s, string c, double p, double ps, int r, double ss) 
+        : brand(b), model(m), serial(s), color(c), price(p), processorSpeed(ps), RAM(r), screenSize(ss) {}
+
+    
+    void setBrand(string b) { brand = b; }
+    void setModel(string m) { model = m; }
+    void setSerial(string s) { serial = s; }
+    void setColor(string c) { color = c; }
+    void setPrice(double p) { price = p; }
+    void setProcessorSpeed(double ps) { processorSpeed = ps; }
+    void setRAM(int r) { RAM = r; }
+    void setScreenSize(double ss) { screenSize = ss; }
+
+
+    void upgradeRAM(int additionalRAM) {
+        RAM += additionalRAM;
+    }
+    void displayAttributes() {
+        cout << "Brand: " << brand <<endl;
+        cout << "Model: " << model <<endl;
+        cout << "Serial: " << serial <<endl;
+        cout << "Color: " << color << endl;
+        cout << "Price: $" << price << endl;
+        cout << "Processor Speed: " << processorSpeed << " GHz" << endl;
+        cout << "RAM: " << RAM << " GB" << std::endl;
+        cout << "Screen Size: " << screenSize << " inches" <<endl;
+    }
+};
+
+int main() {
+    Laptop myLaptop("Dell", "XPS 15", "123456789", "Silver", 1200.00, 3.1, 16, 15.6);
+
+    myLaptop.displayAttributes();
+    
+    myLaptop.upgradeRAM(8);
+
+    cout << "\nAfter upgrading RAM:\n";
+    myLaptop.displayAttributes();
+
+    return 0;
+}
