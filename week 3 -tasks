@@ -1,0 +1,100 @@
+task 1 ;
+
+class Student2 {
+    String name;
+    String city;
+    int age;
+    void displayInfo() {
+        System.out.println("Name: " + name + ", City: " + city + ", Age: " + age);
+    }
+    public static void main(String[] args) {
+        Student2 s1 = new Student2();
+        Student2 s2 = new Student2();
+
+        s1.name = "kashaf";
+s1.city = "Islamabad";
+        s1.age = 19;
+
+        s2.name = "komal";
+        s2.city = "isb";
+        s2.age = 19;
+        s1.displayInfo();  
+        s2.displayInfo();  
+    }
+}
+
+
+task 2 ;
+
+class Area {
+    int length;
+    int width;
+    void calculateArea() {
+        int area = length * width;
+        System.out.println("Area: " + area);
+    }
+    public static void main(String[] args) {
+      
+        Area areaObj = new Area() ;
+        areaObj.length = 10;  
+        areaObj.width = 6;  
+        areaObj.calculateArea();  
+    }
+
+
+task 3;
+
+class Computer {
+    String name;
+    String config;
+    int cost;
+    String os;
+    void displayDetails() {
+        System.out.println("The company name is " + name);
+        System.out.println("The configuration is " + config);
+        System.out.println("Its Cost is " + cost);
+        System.out.println("Its operating System is " + os);
+    }
+
+    public static void main(String[] args) {
+       
+        Computer comp = new Computer();
+
+       
+        comp.name = "Apple";
+        comp.config = "i5";
+        comp.cost = 50000;
+        comp.os = "IOS";
+
+        
+        comp.displayDetails();
+    }
+}
+
+
+task 4;
+
+
+public class MaximumNumber {
+    public static void main(String[] args) {
+       
+        int num1 = 8;
+        int num2 = 15;
+        int num3 = 10;
+
+        
+        int max;
+        if (num1 >= num2 && num1 >= num3) {
+            max = num1;
+        } else if (num2 >= num1 && num2 >= num3) {
+            max = num2;
+        } else {
+            max = num3;
+        }
+
+       
+        System.out.println("The maximum number is: " + max);
+    }
+}
+
+
