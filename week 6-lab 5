@@ -1,0 +1,98 @@
+class Cpu{
+    private String brand;
+    private String capacity;
+
+    public Cpu(String brand, String capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+
+    public String getDetails() {
+        return "CPU Brand: " + brand + ", Capacity: " + capacity;
+    }
+}
+class RAM {
+    private  String brand;
+    private  String capacity;
+
+    public RAM(String brand, String capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+
+    public String getDetails() {return "RAM Brand: " + brand + ", Capacity: " + capacity;
+    }
+}
+class HardDrive {
+    private String brand;
+    private String capacity;
+
+    public HardDrive(String brand, String capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+
+    public String getDetails() {
+        return "Hard Drive Brand: " + brand + ", Capacity: " + capacity;
+    }
+}public class Computer {
+    private CPU cpu;
+    private RAM ram;
+    private HardDrive hardDrive;
+
+    public Computer(CPU cpu, RAM ram, HardDrive hardDrive) {
+        this.cpu = cpu;
+        this.ram = ram;
+        this.hardDrive = hardDrive;
+    }
+
+    public void displayDetails() {
+        if (cpu != null) {
+            System.out.println(cpu.getDetails());
+        } else {
+            System.out.println("CPU has been destroyed.");
+        }
+
+        if (ram != null) {
+            System.out.println(ram.getDetails());
+        } else {
+            System.out.println("RAM has been destroyed.");
+        }
+
+        if (hardDrive != null) {
+            System.out.println(hardDrive.getDetails());
+        } else {
+            System.out.println("HardDrive has been destroyed.");
+        }
+    }
+
+    public void destroy() {
+        cpu = null;
+        ram = null;
+        hardDrive = null;
+        System.out.println("Computer and its components destroyed!");
+    }
+}public class Main {
+    public static void main(String[] args) {
+       
+        CPU cpu = new CPU("HP", 9.5);
+        RAM ram = new RAM("DELL", 16);
+        HardDrive hardDrive = new HardDrive("Seagate", 1000);
+
+        
+        Computer computer = new Computer(cpu, ram, hardDrive);
+
+       
+        computer.displayDetails();
+
+       
+        computer.destroy();
+
+        
+        computer.displayDetails(); }
+
+
+
+
+
+
